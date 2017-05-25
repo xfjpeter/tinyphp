@@ -1,0 +1,59 @@
+<style type="text/css">
+    .handle-panel {
+        width: 800px;
+        padding: 0;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+    }
+    .handle-panel .handle-panel-title {
+        margin: 0;
+        padding: 5px 10px;
+        background-color: #00BCD4;
+        color: #fff;
+    }
+    .handle-panel .handle-panel-body {
+        font-size: 14px;
+        padding: 5px 10px;
+        letter-spacing: 1.6px;
+    }
+    .handle-panel .handle-panel-footer {
+        margin: 5px 10px;
+        text-align: right;
+        border-top: 1px solid #ccc;
+        font-size: 12px;
+        background: #4CAF50;
+        color: #fff;
+        padding: 1px 10px;
+    }
+    .handle-panel-body p.handle-title {
+        background-color: #1abc9c;
+        padding: 3px 5px;
+        color: #fff;
+        padding: 5px 10px;
+        display: inline-block;
+    }
+    .handle-panel-body p {
+        padding-left: 20px;
+        margin: 10px;
+        border-bottom: 1px dashed #1abc9c;
+    }
+</style>
+
+
+<div class="handle-panel">
+    <div class="handle-panel-header">
+        <h3 class="handle-panel-title">运行信息</h3>
+    </div>
+
+    <div class="handle-panel-body">
+        <p class="handle-title">SESSION会话:</p>{$session}
+        <p class="handle-title">内存开销:</p>{$memory}
+        <p class="handle-title">错误信息:</p>{$errmsg}
+        <p class="handle-title">参数信息:</p><pre>{$context}</pre>
+        <p class="handle-title">运行的文件列表:</p>{$files}
+    </div>
+
+    <div class="handle-panel-footer">
+        <p>脚本运行时间:{$time}</p>
+    </div>
+</div>

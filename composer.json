@@ -1,0 +1,19 @@
+{
+    "name" : "tinyphp/tinyphp",
+    "description" : "framework",
+    "type" : "library",
+    "homepage" : "http://www.johnxu.net/",
+    "authors" : [
+        {
+            "name" : "John",
+            "email" : "fsyzxz@163.com"
+        }
+    ],
+    "require" : {
+        "php" : ">=5.4.0",
+        "catfan/medoo" : "*",
+        "monolog/monolog" : "*",
+        "smarty/smarty" : "3.1.*",
+        "workerman/workerman-for-win" : "*"
+    }
+}

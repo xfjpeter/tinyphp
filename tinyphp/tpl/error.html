@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>失败提示</title>
+    <style type="text/css" media="screen">
+        .content {
+            text-align: center;
+        }
+        .content #wait {
+            font-size: 20px;
+            color: #ee0000;
+        }
+        .content a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .content a:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>):{$msg}</h1>
+        <p>
+            <span id="wait">{$wait}</span>s后跳转,
+              [<a href="javascript:history.back();">立即返回</a>]
+        </p>
+    </div>
+    
+    <script type="text/javascript">
+        window.onload = function(){
+            var wait = document.getElementById('wait').innerHTML
+            var interval = setInterval(function(){
+                wait--
+                if (wait <= 0) {
+                    // 返回
+                    history.back();
+                    clearInterval(interval)
+                }
+                document.getElementById('wait').innerHTML = wait
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
