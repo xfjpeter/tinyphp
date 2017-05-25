@@ -1,7 +1,7 @@
 {
     "name" : "tinyphp/tinyphp",
     "description" : "framework",
-    "type" : "library",
+    "type" : "project",
     "homepage" : "http://www.johnxu.net/",
     "authors" : [
         {
